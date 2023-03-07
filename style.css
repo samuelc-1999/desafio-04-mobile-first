@@ -1,0 +1,167 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #E5E5E5;;
+}
+
+:root {
+  font-size: 62.5%;
+  --ff-header: 'Staatliches';
+  --fs-header: 4rem;
+  --ff-text: 'Palanquin', sans-serif;
+  --fs-text: 1.4rem;
+
+  --hue: 220;
+  --hue-2: 275;
+  --fc-text: hsl(var(--hue),84%, 12%);
+  --fc-text1: hsl(var(--hue), 0%, 100%);
+  --bg-primare: hsl(var(--hue), 17%, 62%);
+  --bg-h1: hsl(var(--hue-2), 18%, 79%);
+  --bg-page: hsl(var(--hue), 100%, 97%);
+  --bg-card: hsl(var(--hue), 91%, 96%);
+  --fc-card: hsl(var(--hue), 17%, 35%);
+}
+
+.page {
+  width: 38.4rem;
+  background: var(--bg-page);
+  margin: auto;
+}
+
+header {
+  height: 27.9rem;
+  background: var(--bg-primare);
+  text-align: center;
+}
+
+.logo {
+  padding-top: 3.2rem;
+}
+
+.logo img {
+  width: 13.7rem;
+  height: 13.7rem;
+}
+
+h1 {
+  width: 384px;
+  height: 4.9rem;
+  background: var(--bg-h1);
+  margin-top: 3.2rem;
+  color: var(--fc-text1);
+  font-family: var(--ff-header);
+  font-weight: 400;
+  font-size: var(--fs-header);
+  letter-spacing: 0.2rem;
+  align-items: center;
+  animation-name: alert;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+
+main {
+  padding: 1.4rem 3.2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+p { 
+  color: var(--fc-text);
+  font-family: var(--ff-text);
+  font-weight: 400;
+  font-size: var(--fs-text);
+  line-height: 1.5rem;
+  text-align: center;
+  margin-top: 1.4rem;
+  margin-bottom: 6.3rem;
+}
+
+
+.card {
+  position: relative;
+  margin-bottom: 3.2rem;
+}
+
+.card h2 {
+  position: absolute;
+  width: 11.2rem;
+  height: 3.5rem;
+  background-color: var(--bg-card);
+  left: 19.2rem;
+  top: 1.6rem;
+  border-radius: 2rem;
+  text-align: center;
+  align-items: center;
+  color: var(--fc-card);
+  font-family: var(--ff-header);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 3.4rem;
+  animation-name: topdown;
+  animation-duration: 1.5s;
+  animation-delay: 300ms;
+}
+
+.card h2:hover {
+  transform: scale(1.1);
+  background-color: #d0d0db;
+}
+
+.card img {
+  width: 100%;
+  transition: all 200ms;
+  transition-timing-function: ease ;
+  animation-name: downtop;
+  animation-duration: 1s;
+  border-radius: 2rem;
+  animation-delay: 300ms;
+}
+
+.card img:hover {
+  transform: scale(1.1);
+  opacity: 0.7;
+}
+
+@keyframes topdown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+}
+
+@keyframes downtop {
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  
+}
+
+@keyframes alert {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  
+}
